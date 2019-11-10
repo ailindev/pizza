@@ -1,0 +1,7 @@
+$(function() {
+
+   $('#carousel-main').slick({
+
+});
+   
+});

@@ -70,6 +70,7 @@ a {
 button, figure {
    border: none;
    outline: none;
+   background-color: transparent;
    &:focus, &:active {
       outline: none;
       border: none;

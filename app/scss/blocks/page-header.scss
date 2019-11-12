@@ -115,13 +115,13 @@
             opacity: 0.45;
             font-size: 12px;
             font-weight: 400;
-            letter-spacing: 1.44px;
+            letter-spacing: 1.4px;
          }
 
          &:last-child {
             margin-bottom: 0;
             font-size: 14px;
-            letter-spacing: 1.4px;
+            letter-spacing: 1.45px;
             font-weight: 700;
             font-family: "Roboto Condensed", sans-serif;
 
@@ -142,8 +142,8 @@
 }
 
 .carousel-main {
-   .slick-slide {
-      display: flex;
+   &__item {
+      display: flex !important;
       justify-content: center;
       align-items: center;
    }
@@ -152,7 +152,7 @@
       max-width: 509px;
 
       img {
-         width: 100%;
+         width: 509px;
          max-width: 100%;
          display: block;
          height: auto;
@@ -180,6 +180,5 @@
          max-width: 250px;
       }
    }
-
 }
 

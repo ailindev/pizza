@@ -1,0 +1,109 @@
+.s-snack {
+
+}
+
+.carousel-snack {
+   margin: 53px auto 0;
+   max-width: 960px;
+   &.slick-slider {
+      margin-bottom: 170px;
+   }
+   .slick-track {
+      margin: 0 -15px;
+   }
+   .slick-prev {
+      left: -80px;
+   }
+   .slick-next {
+      right: -80px;
+   }
+   .slick-dots {
+      bottom: -65px;
+   }
+
+   &__item {
+      margin: 0 15px;
+      color: $text-darken;
+      text-align: center;
+
+      .card {
+         &-img-top {
+            display: flex;
+            object-fit: cover;
+            height: 100%;
+         }
+         &-img-wrap {
+            position: relative;
+            height: 180px;
+
+            .size-price-wrap {
+               position: absolute;
+               bottom: 0;
+               left: 50%;
+               transform: translate(-50%, 50%);
+               width: 60px;
+               height: 60px;
+               background-color: $accent;
+               color: $text-light;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               border-radius: 50%;
+
+               > div {
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 14px;
+
+                  span {
+                     font-size: 14px;
+                     font-weight: 700;
+                  }
+               }
+            }
+         }
+
+         &-body {
+            padding: 0;
+         }
+
+         &-title {
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 24px;
+            text-transform: uppercase;
+         }
+
+         &-desc {
+            margin-top: 24px;
+            margin-bottom: 18px;
+            padding: 0 25px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+         }
+
+         &-structure {
+            padding: 13px 25px;
+            margin: 0;
+            background-color: #eaeaea;
+
+            span {
+               color: #5c5c5c;
+               font-weight: 700;
+            }
+
+            color: #666666;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20px;
+         }
+      }
+
+      .btn {
+         display: block;
+      }
+   }
+}

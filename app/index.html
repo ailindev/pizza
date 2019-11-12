@@ -88,34 +88,40 @@
                   <div class="col-12">
 
                      <div class="carousel-main" id="carousel-main">
-                        <div class="carouse-item">
+                        <div class="carousel-main__item">
                            <div class="carousel-main__composition">
                               <h4 class="h4-title">Пицца Неаполитана</h4>
                               <p>Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром</p>
-                              <button class="btn"><i class="icon-check"></i>Выбрать</button>
+                              <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
                            </div>
                            <div class="carousel-main__img">
-                              <img src="img/content/header/neapolitana.png" alt="Пицца Неаполитана">
+                              <picture>
+                                 <img src="img/content/header/neapolitana.png" srcset="img/content/header/neapolitana.png 1x, img/content/header/neapolitana@2x.png 2x" alt="">
+                              </picture>
                            </div>
                         </div>
-                        <div class="carouse-item">
+                        <div class="carousel-main__item">
                            <div class="carousel-main__composition">
                               <h4 class="h4-title">Пицца Томато</h4>
                               <p>Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром</p>
-                              <button class="btn"><i class="icon-check"></i>Выбрать</button>
+                              <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
                            </div>
                            <div class="carousel-main__img">
-                              <img src="img/content/header/pepperony.png" alt="Пицца Неаполитана">
+                              <picture>
+                                 <img src="img/content/header/pepperony.png" srcset="img/content/header/pepperony.png 1x, img/content/header/pepperony@2x.png 2x" alt="">
+                              </picture>
                            </div>
                         </div>
-                        <div class="carouse-item">
+                        <div class="carousel-main__item">
                            <div class="carousel-main__composition">
                               <h4 class="h4-title">Пицца Тропикана</h4>
                               <p>Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром</p>
-                              <button class="btn"><i class="icon-check"></i>Выбрать</button>
+                              <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
                            </div>
                            <div class="carousel-main__img">
-                              <img src="img/content/header/tropicana.png" alt="Пицца Неаполитана">
+                              <picture>
+                                 <img src="img/content/header/tropicana.png" srcset="img/content/header/tropicana.png 1x, img/content/header/tropicana@2x.png 2x" alt="">
+                              </picture>
                            </div>
                         </div>
                      </div>
@@ -136,6 +142,311 @@
 
    <!-- page-content -->
    <main class="page-content">
+
+      <section class="s-pizza" id="s-pizza">
+         <a href="#" class="s--before"></a>
+
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="s__title">
+                     <div class="h2-title">Выбрать Пиццу</div>
+                  </div>
+                  <!-- /.s-title-->
+
+                  <div class="carousel-pizza" id="carousel-pizza">
+
+                     <div class="carousel-pizza__item card">
+                        <div class="card__img-wrap">
+                           <div class="size-price-wrap">
+                              <button class="size size-1">26</button>
+                              <button class="size size-2">32</button>
+                              <p class="price">1 345 <span>руб.</span></p>
+                           </div>
+                           <picture>
+                              <img class="card-img-top" src="img/content/choice-pizza/neapolitana.png"
+                                   srcset="img/content/choice-pizza/neapolitana.png 1x, img/content/choice-pizza/neapolitana@2x.png 2x"
+                                   alt="">
+                           </picture>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Пицца томато, 26 см</h5>
+                           <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-pizza__item card">
+                        <div class="card__img-wrap">
+                           <div class="size-price-wrap">
+                              <button class="size size-1">26</button>
+                              <button class="size size-2">32</button>
+                              <p class="price">1 345 <span>руб.</span></p>
+                           </div>
+                           <picture>
+                              <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
+                                   srcset="img/content/choice-pizza/pepperony.png 1x, img/content/choice-pizza/pepperony@2x.png 2x"
+                                   alt="">
+                           </picture>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Пицца пепперони, 26 см</h5>
+                           <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-pizza__item card">
+                        <div class="card__img-wrap">
+                           <div class="size-price-wrap">
+                              <button class="size size-1">26</button>
+                              <button class="size size-2">32</button>
+                              <p class="price">1 345 <span>руб.</span></p>
+                           </div>
+                           <picture>
+                              <img class="card-img-top" src="img/content/choice-pizza/tropicana.png"
+                                   srcset="img/content/choice-pizza/tropicana.png 1x, img/content/choice-pizza/tropicana@2x.png 2x"
+                                   alt="">
+                           </picture>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Пицца тропикана, 26 см</h5>
+                           <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-pizza__item card">
+                        <div class="card__img-wrap">
+                           <div class="size-price-wrap">
+                              <button class="size size-1">26</button>
+                              <button class="size size-2">32</button>
+                              <p class="price">1 345 <span>руб.</span></p>
+                           </div>
+                           <picture>
+                              <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
+                                   srcset="img/content/choice-pizza/pepperony.png 1x, img/content/choice-pizza/pepperony@2x.png 2x"
+                                   alt="">
+                           </picture>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Пицца пепперони, 26 см</h5>
+                           <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-pizza__item card">
+                        <div class="card__img-wrap">
+                           <div class="size-price-wrap">
+                              <button class="size size-1">26</button>
+                              <button class="size size-2">32</button>
+                              <p class="price">1 345 <span>руб.</span></p>
+                           </div>
+                           <picture>
+                              <img class="card-img-top" src="img/content/choice-pizza/neapolitana.png"
+                                   srcset="img/content/choice-pizza/neapolitana.png 1x, img/content/choice-pizza/neapolitana@2x.png 2x"
+                                   alt="">
+                           </picture>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Пицца томато, 26 см</h5>
+                           <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-pizza__item card">
+                        <div class="card__img-wrap">
+                           <div class="size-price-wrap">
+                              <button class="size size-1">26</button>
+                              <button class="size size-2">32</button>
+                              <p class="price">1 345 <span>руб.</span></p>
+                           </div>
+                           <picture>
+                              <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
+                                   srcset="img/content/choice-pizza/pepperony.png 1x, img/content/choice-pizza/pepperony@2x.png 2x"
+                                   alt="">
+                           </picture>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Пицца пепперони, 26 см</h5>
+                           <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+
+                  </div>
+
+               </div>
+               <!-- /.col-12 -->
+            </div>
+            <!-- /.row -->
+         </div>
+         <!-- /.container -->
+      </section>
+      <!-- /#s-pizza.s-pizza -->
+
+      <section class="s-snack" id="s-snack" style="background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('img/general/snack-bg.jpg');">
+         <a href="#" class="s--before"></a>
+         <div class="s__title s__title--light">
+            <div class="h2-title">Выбрать Закуски</div>
+            <p>Не забудь выбрать свежие закуски и салаты от нашего шеф-повара, которые гармонично дополнят ваше меню сегодня.</p>
+         </div>
+         <!-- /.s__title-->
+
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+
+                  <div class="carousel-snack" id="carousel-snack">
+
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat1.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat2.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat3.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat1.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat1.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat2.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+                     <div class="carousel-snack__item card">
+                        <div class="card-img-wrap">
+                           <!--                        <picture>-->
+                           <img class="card-img-top" src="img/content/choice-snack/salat3.jpg" alt="">
+                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
+
+                           <!--                        </picture>-->
+                           <div class="size-price-wrap">
+                              <div class="size"><span>125</span> р.</div>
+                              <div class="price"><span>100</span> гр.</div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <h5 class="card-title">Салат греческий</h5>
+                           <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
+                           <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+                           <a href="#" class="btn"><i class="icon-check"></i>Выбрать</a>
+                        </div>
+                     </div>
+
+
+                  </div>
+
+               </div>
+               <!-- /.col-12 -->
+            </div>
+            <!-- /.row -->
+         </div>
+         <!-- /.container -->
+      </section>
+      <!-- /#s-snack.s-snack -->
 
    </main>
    <!-- /.page-content -->

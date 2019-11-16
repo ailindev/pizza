@@ -1,4 +1,4 @@
-.btn {
+.button{
    display: inline-block;
    color: $text-light;
    background-color: $accent;
@@ -169,6 +169,7 @@
    z-index: 10;
    transition: $trs;
    border-radius: 50%;
+   transform: translate3d(0,0,0);
    &.slick-disabled {
       opacity: .6;
       &:before {

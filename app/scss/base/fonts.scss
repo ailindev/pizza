@@ -10,26 +10,10 @@
 
 
 @font-face {
-   font-family: 'Roboto Condensed';
-   src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
-   url('../fonts/RobotoCondensed-Bold.woff') format('woff');
-   font-weight: bold;
-   font-style: normal;
-}
-
-@font-face {
    font-family: 'Raleway';
    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
    url('../fonts/Raleway-Bold.woff') format('woff');
    font-weight: bold;
-   font-style: normal;
-}
-
-@font-face {
-   font-family: 'Nautilus Pompilius';
-   src: url('../fonts/NautilusPompilius.woff2') format('woff2'),
-   url('../fonts/NautilusPompilius.woff') format('woff');
-   font-weight: normal;
    font-style: normal;
 }
 
@@ -50,14 +34,6 @@
 }
 
 @font-face {
-   font-family: '1Isadora M';
-   src: url('../fonts/1IsadoraMBold.woff2') format('woff2'),
-   url('../fonts/1IsadoraMBold.woff') format('woff');
-   font-weight: bold;
-   font-style: normal;
-}
-
-@font-face {
    font-family: 'Raleway';
    src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
    url('../fonts/Raleway-ExtraBold.woff') format('woff');
@@ -65,7 +41,29 @@
    font-style: normal;
 }
 
+@font-face {
+   font-family: 'Nautilus Pompilius';
+   src: url('../fonts/NautilusPompilius.woff2') format('woff2'),
+   url('../fonts/NautilusPompilius.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
 
+@font-face {
+   font-family: 'Roboto Condensed';
+   src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+   url('../fonts/RobotoCondensed-Bold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: '1Isadora M';
+   src: url('../fonts/1IsadoraMBold.woff2') format('woff2'),
+   url('../fonts/1IsadoraMBold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+}
 
 
 
@@ -96,6 +94,9 @@
    -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+   content: "\e90c";
+}
 .icon-logo:before {
    content: "\e90b";
    color: #727272;

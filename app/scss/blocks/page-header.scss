@@ -73,7 +73,7 @@
       text-decoration: underline;
       transition: $trs;
 
-      .icon-chevron-right {
+      .icon {
          position: relative;
          display: inline-block;
          width: 20px;
@@ -97,7 +97,7 @@
       &.active {
          color: $accent;
 
-         .icon-chevron-right {
+         .icon {
             background-color: darken($accent, 20%);
             opacity: 1;
          }

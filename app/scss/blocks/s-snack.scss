@@ -1,14 +1,21 @@
 .s-snack {
-
+   padding-bottom: 90px;
 }
 
 .carousel-snack {
    margin: 53px auto 0;
    max-width: 960px;
-   &.slick-slider {
-      margin-bottom: 170px;
+   @include media-breakpoint-down(lg) {
+      max-width: 670px;
    }
-   .slick-track {
+   @include media-breakpoint-down(md) {
+      max-width: 330px;
+   }
+   &.slick-dotted.slick-slider {
+      margin-bottom: 65px;
+   }
+
+   .slick-list {
       margin: 0 -15px;
    }
    .slick-prev {
@@ -19,6 +26,9 @@
    }
    .slick-dots {
       bottom: -65px;
+      @include media-breakpoint-down(lg) {
+         bottom: -75px;
+      }
    }
 
    &__item {

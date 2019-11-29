@@ -1,24 +1,64 @@
 .s-drink {
-
+   padding-bottom: 90px;
 }
 
 .carousel-drink {
    max-width: 755px;
-   margin: 91px auto 98px;
+   margin: 91px auto 0;
+   height: 468px;
+
+   @include media-breakpoint-down(lg) {
+      height: auto;
+   }
+
+   &.slick-dotted.slick-slider {
+      @include media-breakpoint-down(lg) {
+         margin-bottom: 75px;
+      }
+   }
+
+   @include media-breakpoint-down(md) {
+      max-width: 520px;
+   }
+
    .slick-prev {
       left: -50px;
+      @include media-breakpoint-down(sm) {
+         left: -15px;
+      }
+      @include media-breakpoint-down(xs) {
+         left: 0;
+      }
    }
+
    .slick-next {
       right: -50px;
+      @include media-breakpoint-down(sm) {
+         right: -15px;
+      }
+      @include media-breakpoint-down(xs) {
+         right: 0;
+      }
    }
+
    .slick-next, .slick-prev {
       &:before {
          color: $gray;
       }
+
       &:hover {
          &:before {
             color: $text-light;
          }
+      }
+      @include media-breakpoint-down(md) {
+         transform: translate3d(0,-60%,0);
+      }
+
+   }
+   .slick-dots {
+      @include media-breakpoint-down(lg) {
+         bottom: -75px;
       }
    }
 
@@ -31,15 +71,18 @@
       &-body {
          padding: 0;
       }
+
       &-img-wrap {
          margin: 0 auto 45px;
          transition: $trs;
+
          img {
             width: auto;
             height: 242px;
             transition: $trs;
          }
       }
+
       &-title {
          color: $text-darken;
          font-size: 16px;
@@ -48,6 +91,7 @@
          margin-bottom: 3px;
          transition: $trs;
       }
+
       &-price {
          color: $gray;
          font-size: 14px;
@@ -56,16 +100,19 @@
          margin-bottom: 16px;
          transition: $trs;
       }
+
       .button {
          font-size: 14px;
          padding: 16px 38px;
          transition: $trs;
+
          i {
             font-size: 12px;
             transition: $trs;
          }
       }
    }
+
    &.slick-initialized .slick-slide {
       display: flex;
       flex-direction: column;
@@ -76,25 +123,56 @@
    &__item {
       height: 467px;
       padding: 38px 0;
+      @include media-breakpoint-down(lg) {
+         padding: 0;
+         height: auto;
+      }
+      @include media-breakpoint-down(md) {
+         padding: 0;
+      }
+
       &.slick-current {
          .card {
             &-img-wrap {
                margin-bottom: 48px;
+               @include media-breakpoint-down(md) {
+                  margin: 0 auto 45px;
+               }
+
                img {
                   height: 313px;
+                  @include media-breakpoint-down(md) {
+                     height: 242px;
+                  }
                }
             }
+
             &-title {
                font-size: 18px;
+               @include media-breakpoint-down(md) {
+                  font-size: 16px;
+               }
             }
+
             &-price {
                font-size: 16px;
+               @include media-breakpoint-down(md) {
+                  font-size: 14px;
+               }
             }
          }
+
          .button {
             font-size: 16px;
+            @include media-breakpoint-down(md) {
+               font-size: 14px;
+            }
+
             i {
                font-size: 14px;
+               @include media-breakpoint-down(md) {
+                  font-size: 12px;
+               }
             }
          }
       }

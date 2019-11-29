@@ -1,5 +1,12 @@
 .page-footer {
    padding: 62px 0 70px;
+   @include media-breakpoint-down(lg) {
+      div[class^="col-"] {
+         &:nth-child(3), &:nth-child(4) {
+            margin-top: 60px;
+         }
+      }
+   }
 
    &__desc {
       margin-bottom: 45px;

@@ -2,6 +2,18 @@
    height: 100vh;
    width: 100%;
    min-height: 750px;
+
+   @include media-breakpoint-down(md) {
+      height: 100%;
+      min-height: 100%;
+      padding: 0 0 170px;
+   }
+   .flex-center {
+      width: 100%;
+      @include media-breakpoint-down(md) {
+         margin: 70px auto 0;
+      }
+   }
 }
 
 .main-nav {
@@ -10,21 +22,50 @@
    left: 0;
    width: 100%;
    padding-top: 35px;
+   @include media-breakpoint-down(md) {
+      position: initial;
+   }
+
 
    .row {
-      width: 100%;
+      width: 100vw;
    }
 
    .col-12 {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include media-breakpoint-down(md) {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+      @include media-breakpoint-down(xs) {
+         flex-direction: column;
+      }
+   }
+   .nav {
+      @include media-breakpoint-down(md) {
+         order: 3;
+         margin-top: 30px;
+      }
+      @include media-breakpoint-down(xs) {
+         margin: auto;
+         flex-direction: column;
+      }
    }
 
 
    .navbar-brand {
       display: flex;
       align-items: center;
+      margin-right: 0;
+      @include media-breakpoint-down(md) {
+         margin-right: 90px;
+         order: 1;
+      }
+      @include media-breakpoint-down(xs) {
+         margin: auto;
+      }
    }
 
    .h1-title {
@@ -55,6 +96,9 @@
    }
 
    .nav-item {
+      @include media-breakpoint-down(md) {
+         margin-right: 7px;
+      }
       .nav-link {
          &:hover {
             color: $accent;
@@ -72,6 +116,17 @@
       text-transform: uppercase;
       text-decoration: underline;
       transition: $trs;
+      @include media-breakpoint-down(lg) {
+         padding: 5px;
+      }
+      @include media-breakpoint-down(sm) {
+         padding: 0;
+      }
+      @include media-breakpoint-down(xs) {
+         padding: 9px;
+         font-size: 14px;
+         text-decoration: none;
+      }
 
       .icon {
          position: relative;
@@ -83,6 +138,12 @@
          opacity: .4;
          border-radius: 50%;
          transition: $trs;
+         @include media-breakpoint-down(sm) {
+            margin-right: 4px;
+         }
+         @include media-breakpoint-down(xs) {
+            margin-right: 10px;
+         }
 
          &:before {
             position: absolute;
@@ -138,36 +199,89 @@
          font-size: 11px;
          color: $accent;
       }
+      @include media-breakpoint-down(md) {
+         order: 2;
+      }
+      @include media-breakpoint-down(xs) {
+         margin: 30px auto;
+      }
    }
 }
 
 .carousel-main {
+   max-width: 930px;
+   margin: auto;
+   @include media-breakpoint-down(lg) {
+      max-width: 760px;
+   }
+   @include media-breakpoint-down(md) {
+      max-width: 500px;
+   }
+   @include media-breakpoint-down(xs) {
+      max-width: 100%;
+   }
+   .slick-list {
+      margin: 0 -40px;
+   }
+   .slick-prev {
+      left: -85px;
+      @include media-breakpoint-down(sm) {
+         left: -10px;
+      }
+   }
+   .slick-next {
+       right: -85px;
+      @include media-breakpoint-down(sm) {
+         right: -10px;
+      }
+    }
+   .slick-dots {
+      @include media-breakpoint-down(lg) {
+         bottom: -75px;
+      }
+
+   }
+   &.slick-dotted.slick-slider {
+      @include media-breakpoint-down(lg) {
+         margin-bottom: 75px;
+      }
+   }
    &__item {
       display: flex !important;
       justify-content: center;
       align-items: center;
-   }
-
-   &__img {
-      max-width: 509px;
-
-      img {
-         width: 509px;
-         max-width: 100%;
-         display: block;
-         height: auto;
+      padding-left: 40px;
+      padding-right: 40px;
+      @include media-breakpoint-down(md) {
+         flex-direction: column;
       }
    }
 
    &__composition {
       margin-right: 75px;
+      width: 45%;
+      @include media-breakpoint-down(lg) {
+         margin-right: 15px;
+      }
+      @include media-breakpoint-down(md) {
+         margin-top: 25px;
+         margin-right: 0;
+         width: 100%;
+         order: 2;
+         text-align: center;
+      }
       .h4-title {
          color: $text-light;
          font-family: "1Isadora M", sans-serif;
          font-size: 52px;
          font-weight: 400;
          line-height: 56px;
-         max-width: 352px;
+         @include media-breakpoint-down(lg) {
+            font-size: 46px;
+         }
+         @include media-breakpoint-down(sm) {
+            font-size: 40px;
+         }
       }
 
       p {
@@ -178,7 +292,34 @@
          font-weight: 400;
          line-height: 25px;
          max-width: 250px;
+         @include media-breakpoint-down(lg) {
+            margin-top: 25px;
+            margin-bottom: 45px;
+         }
+         @include media-breakpoint-down(md) {
+            max-width: 70%;
+            margin: 25px auto 30px;
+         }
+         @include media-breakpoint-down(sm) {
+            max-width: 80%;
+            margin: 18px auto 30px;
+         }
       }
    }
+
+   &__img {
+      @include media-breakpoint-down(lg) {
+         width: 380px;
+      }
+      @include media-breakpoint-down(md) {
+         width: 260px;
+         order: 1;
+      }
+
+      img {
+         min-width: 100%;
+      }
+   }
+
 }
 

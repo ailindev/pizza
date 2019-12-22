@@ -121,8 +121,7 @@
    }
 
    &__item {
-      height: 467px;
-      padding: 38px 0;
+      padding-top: 39px;
       @include media-breakpoint-down(lg) {
          padding: 0;
          height: auto;
@@ -132,6 +131,10 @@
       }
 
       &.slick-current {
+         transform: translateY(-39px);
+         @include media-breakpoint-down(md) {
+            transform: translateY(0);
+         }
          .card {
             &-img-wrap {
                margin-bottom: 48px;

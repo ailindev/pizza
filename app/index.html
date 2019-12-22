@@ -49,8 +49,8 @@
                      <h1 class="h1-title"><span>Пицца</span>на дом</h1>
                   </a>
                   <ul class="nav">
-                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">
                            <i class="icon icon-chevron-right"></i>Начало</a>
                      </li>
                      <li class="nav-item">
@@ -167,10 +167,15 @@
                            <div class="card__img-wrap">
                               <div class="size-price-wrap">
                                  <div class="size-wrap">
-                                    <button class="size size-1">26</button>
-                                    <button class="size size-2">32</button>
+                                    <button class="size size-1 active"
+                                            data-size="26">26</button>
+                                    <button class="size size-2"
+                                            data-size="32">32</button>
                                  </div>
-                                 <p class="price">1 345 <span>руб.</span></p>
+                                 <p class="price">
+                                    <span class="sum" data-price="1600">1 600</span>
+                                    <span class="currency"> руб.</span>
+                                 </p>
                               </div>
                               <picture>
                                  <img class="card-img-top" src="img/content/choice-pizza/neapolitana.png"
@@ -191,10 +196,15 @@
                            <div class="card__img-wrap">
                               <div class="size-price-wrap">
                                  <div class="size-wrap">
-                                    <button class="size size-1">26</button>
-                                    <button class="size size-2">32</button>
+                                    <button class="size size-1 active"
+                                            data-size="26">26</button>
+                                    <button class="size size-2"
+                                            data-size="32">32</button>
                                  </div>
-                                 <p class="price">1 345 <span>руб.</span></p>
+                                 <p class="price">
+                                    <span class="sum" data-price="1550">1 550</span>
+                                    <span class="currency"> руб.</span>
+                                 </p>
                               </div>
                               <picture>
                                  <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
@@ -215,10 +225,15 @@
                            <div class="card__img-wrap">
                               <div class="size-price-wrap">
                                  <div class="size-wrap">
-                                    <button class="size size-1">26</button>
-                                    <button class="size size-2">32</button>
+                                    <button class="size size-1 active"
+                                            data-size="26">26</button>
+                                    <button class="size size-2"
+                                            data-size="32">32</button>
                                  </div>
-                                 <p class="price">1 345 <span>руб.</span></p>
+                                 <p class="price">
+                                    <span class="sum" data-price="1880">1 880</span>
+                                    <span class="currency"> руб.</span>
+                                 </p>
                               </div>
                               <picture>
                                  <img class="card-img-top" src="img/content/choice-pizza/tropicana.png"
@@ -239,10 +254,15 @@
                            <div class="card__img-wrap">
                               <div class="size-price-wrap">
                                  <div class="size-wrap">
-                                    <button class="size size-1">26</button>
-                                    <button class="size size-2">32</button>
+                                    <button class="size size-1 active"
+                                            data-size="26">26</button>
+                                    <button class="size size-2"
+                                            data-size="32">32</button>
                                  </div>
-                                 <p class="price">1 345 <span>руб.</span></p>
+                                 <p class="price">
+                                    <span class="sum" data-price="1550">1 550</span>
+                                    <span class="currency"> руб.</span>
+                                 </p>
                               </div>
                               <picture>
                                  <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
@@ -263,10 +283,15 @@
                            <div class="card__img-wrap">
                               <div class="size-price-wrap">
                                  <div class="size-wrap">
-                                    <button class="size size-1">26</button>
-                                    <button class="size size-2">32</button>
+                                    <button class="size size-1 active"
+                                            data-size="26">26</button>
+                                    <button class="size size-2"
+                                            data-size="32">32</button>
                                  </div>
-                                 <p class="price">1 345 <span>руб.</span></p>
+                                 <p class="price">
+                                    <span class="sum" data-price="1600">1 600</span>
+                                    <span class="currency"> руб.</span>
+                                 </p>
                               </div>
                               <picture>
                                  <img class="card-img-top" src="img/content/choice-pizza/neapolitana.png"
@@ -287,10 +312,15 @@
                            <div class="card__img-wrap">
                               <div class="size-price-wrap">
                                  <div class="size-wrap">
-                                    <button class="size size-1">26</button>
-                                    <button class="size size-2">32</button>
+                                    <button class="size size-1 active"
+                                            data-size="26">26</button>
+                                    <button class="size size-2"
+                                            data-size="32">32</button>
                                  </div>
-                                 <p class="price">1 345 <span>руб.</span></p>
+                                 <p class="price">
+                                    <span class="sum" data-price="1550">1 550</span>
+                                    <span class="currency"> руб.</span>
+                                 </p>
                               </div>
                               <picture>
                                  <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
@@ -647,8 +677,15 @@
 
                            <div class="order-item">
                               <button class="order-item__btn-remove"><i class="icon-close"></i></button>
-                              <span class="order-item__name">Пицца “Пепперони”</span><span class="order-item__amount">1</span> шт. /
-                              <div class="order-item__price">1330</div> руб.
+
+                              <div class="order-item-composition">
+                                 <span class="order-item__name">Пицца “Пепперони”</span>
+                                 <div class="order-item__amount-price">
+                                    <span class="order-item__amount">1</span> шт. /
+                                    <span class="order-item__price">1330</span> руб.
+                                 </div>
+                              </div>
+                              <!-- /.order-item-composition -->
                            </div>
 
                         </div>
@@ -658,8 +695,11 @@
 
                         <div class="order-price">
                            <p class="h4-title">Итого: <span class="price">21 450 <span>руб.</span></span></p>
-                           <button class="order-reset"><i class="icon-close"></i><span>сбросить</span></button>
-                           <a href="#" class="button"><i class="icon-check"></i>Оформить</a>
+                           <div class="order-price-final">
+                              <button class="order-reset"><i class="icon-close"></i><span>сбросить</span></button>
+                              <a href="#" class="button"><i class="icon-check"></i>Оформить</a>
+                           </div>
+                           <!-- /.order-price-final -->
                         </div>
                         <!-- /.order-price -->
                      </div>
@@ -687,10 +727,10 @@
                <h3 class="h3-title">Пицца на дом</h3>
                <p class="page-footer__desc">Моментальная доставка свежей горячей пиццы прямо к вам домой или в офис.</p>
                <ul class="contact-info">
-                  <li class="contact-info__item contact-info__item--td"><i class="icon icon-envelope"></i><a href="mailto:pizzanadom@yandex.ru">pizzanadom@yandex.ru</a></li>
+                  <li class="contact-info__item contact-info__item--td"><i class="icon icon-envelope"></i><a href="mailto:examplepizza@example.ru">examplepizza@example.ru</a></li>
                   <li class="contact-info__item"><i class="icon icon-phone-alt"></i>+7 (999) 999-99-99</li>
                   <li class="contact-info__item"><i class="icon icon-map-marker-alt"></i>Москва. Коломенское ш.
-                                       дом 46а. оф.345</li>
+                                       дом 99аbc. оф.022</li>
                </ul>
             </div>
             <!-- /.col-xl-3 -->
@@ -698,8 +738,8 @@
                <h3 class="h3-title">Заказать:</h3>
                <nav class="main-nav page-footer__main-nav">
                   <ul class="nav page-footer__list">
-                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">
                            <i class="icon icon-chevron-right"></i>Начало</a>
                      </li>
                      <li class="nav-item">

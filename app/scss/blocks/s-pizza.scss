@@ -191,6 +191,9 @@
          color: $text-light;
          border: 7px solid $accent;
          border-radius: 50%;
+         &.active {
+            background-color: darken($accent, 12%);
+         }
       }
       .size-1 {
          width: 54px;
@@ -218,6 +221,7 @@
       }
 
       .price {
+         width: 131.5px;
          padding: 12px 23px;
          display: inline-block;
          line-height: 18px;
@@ -227,15 +231,13 @@
          margin-right: -10px;
          @include media-breakpoint-down(lg) {
             font-size: 26px;
-            padding: 13px 26px;
          }
          @include media-breakpoint-down(xs) {
             font-size: 22px;
             margin-top: 25px;
-            padding: 13px 26px;
          }
 
-         span {
+         .currency {
             font-size: 16px;
             line-height: 22px;
             @include media-breakpoint-down(lg) {

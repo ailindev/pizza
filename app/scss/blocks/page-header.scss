@@ -96,13 +96,22 @@
    }
 
    .nav-item {
-      @include media-breakpoint-down(md) {
-         margin-right: 7px;
-      }
       .nav-link {
          &:hover {
             color: $accent;
          }
+      }
+      &.active {
+         .nav-link {
+            color: $accent;
+            .icon {
+               background-color: darken($accent, 20%);
+               opacity: 1;
+            }
+         }
+      }
+      @include media-breakpoint-down(md) {
+         margin-right: 7px;
       }
    }
 
@@ -152,15 +161,6 @@
             transform: translate(-50%, -50%);
             font-size: 11px;
             transition: $trs;
-         }
-      }
-
-      &.active {
-         color: $accent;
-
-         .icon {
-            background-color: darken($accent, 20%);
-            opacity: 1;
          }
       }
    }
@@ -222,6 +222,9 @@
    }
    .slick-list {
       margin: 0 -40px;
+      @include media-breakpoint-down(sm) {
+         margin: 0;
+      }
    }
    .slick-prev {
       left: -85px;
@@ -254,6 +257,9 @@
       padding-right: 40px;
       @include media-breakpoint-down(md) {
          flex-direction: column;
+      }
+      @include media-breakpoint-down(sm) {
+         padding: 0;
       }
    }
 

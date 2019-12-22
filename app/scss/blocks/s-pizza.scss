@@ -229,6 +229,7 @@
          font-size: 24px;
          font-weight: 400;
          margin-right: -10px;
+         white-space: nowrap;
          @include media-breakpoint-down(lg) {
             font-size: 26px;
          }

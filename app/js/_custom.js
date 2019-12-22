@@ -110,16 +110,58 @@ $(function () {
       ]
    });
 
+
+   // Настройка главной навигации(меню)
+   function menuSettings() {
+
+      let headerS = $('.page-header');
+      let mainNav = $('.page-header .main-nav');
+      let mainMenu = $('.page-header .main-nav ul.nav');
+      let scrollTop = $(window).scrollTop();
+
+      $(window).on('scroll', menuVisible);
+
+      // Установка условий, когда меню будет прикрепляться вверху экрана
+      function menuVisible() {
+         scrollTop = $(window).scrollTop();
+
+         // Проверка на разрешение экрана
+         if($(window).width() < 992) {
+            if (headerS.height() < scrollTop) {
+               mainMenu.addClass('nav--fixed');
+            } else if (headerS.height() > scrollTop) {
+               mainMenu.removeClass('nav--fixed');
+            }
+         } else if ($(window).width() > 992) {
+            if (headerS.height() < scrollTop) {
+               mainNav.addClass('main-nav--fixed');
+            } else if (headerS.height() > scrollTop) {
+               mainNav.removeClass('main-nav--fixed');
+            }
+         }
+      }
+      menuVisible();
+
+      // Задаем отступ от блока с навигацией с абсолютным позиционированием, чтобы он появлялся, не влияя на прокрутку
+      if ($(window).width() < 992) {
+         $('.carousel-main').css('marginTop', $('.main-nav').outerHeight() + 'px');
+      }
+
+   }
+
+   menuSettings();
+
+
    // Настройка размеров пиццы
-   $('.carousel-pizza .size-price-wrap .size').on('click', function() {
+   $('.carousel-pizza .size-price-wrap .size').on('click', function () {
       // Удаление класса active со всех элементов
       $(this).parent().children('.size').removeClass('active');
 
       // Добавление/Удаление класса active с элемента карусели
-      if(!$(this).hasClass('active')) {
+      if (!$(this).hasClass('active')) {
          $(this).addClass('active');
 
-      } else if($(this).hasClass('active')) {
+      } else if ($(this).hasClass('active')) {
          $(this).removeClass('active');
       }
 
@@ -140,7 +182,7 @@ $(function () {
       totalPrice = toNiceView(totalPrice);
 
       // Присваивание цены, в зависимости от размера
-      if(size === 32) {
+      if (size === 32) {
          $(this).parents('.size-price-wrap').find('.sum').text(totalPrice);
       } else if (size === 26) {
          $(this).parents('.size-price-wrap').find('.sum').text(price);

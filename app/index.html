@@ -36,7 +36,7 @@
 <div class="wrapper">
    <div class="overlay"></div>
    <!-- .page-header -->
-   <header class="page-header"
+   <header class="page-header" id="page-header"
            style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('img/general/main-bg.jpg');">
 
       <nav class="page-header__main-nav main-nav navbar" id="main-nav">
@@ -44,25 +44,25 @@
             <div class="row">
                <div class="col-12">
                   <button class="menu-button"><span></span></button>
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="/">
                      <i class="icon-logo"></i>
                      <h1 class="h1-title"><span>Пицца</span>на дом</h1>
                   </a>
                   <ul class="page-header__nav nav">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                     <li class="nav-item">
+                        <a class="nav-link" href="#page-header">
                            <i class="icon icon-chevron-right"></i>Начало</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#s-pizza">
                            <i class="icon icon-chevron-right"></i>Выбрать Пиццу</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#s-snack">
                            <i class="icon icon-chevron-right"></i>Выбрать закуску</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#s-drink">
                            <i class="icon icon-chevron-right"></i>Выбрать Напитки</a>
                      </li>
                   </ul>
@@ -150,7 +150,7 @@
    <main class="page-content">
 
       <section class="s-pizza" id="s-pizza">
-         <a href="#" class="s--before"></a>
+         <a href="#s-pizza" class="s--before arrow-down"></a>
 
          <div class="container">
             <div class="row">
@@ -354,7 +354,7 @@
 
       <section class="s-snack" id="s-snack"
                style="background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('img/general/snack-bg.jpg');">
-         <a href="#" class="s--before"></a>
+         <a href="#s-snack" class="s--before arrow-down"></a>
          <div class="s__title s__title--light">
             <div class="h2-title">Выбрать Закуски</div>
             <p>Не забудь выбрать свежие закуски и салаты от нашего шеф-повара, которые гармонично дополнят ваше меню
@@ -522,7 +522,7 @@
       <!-- /#s-snack.s-snack -->
 
       <section class="s-drink" id="s-drink">
-         <a href="#" class="s--before"></a>
+         <a href="#s-drink" class="s--before arrow-down"></a>
          <div class="s__title">
             <div class="h2-title">Выбрать Напитки</div>
             <p>Что может быть лучше освежающего газированного напитка в дополнение к горячей ароматной пицце.</p>
@@ -605,7 +605,7 @@
       <!-- /#s-drink.s-drink -->
 
       <section class="s-delivery" id="s-delivery" style="background-image: url('img/general/flour.jpg');">
-         <a href="#" class="s--before"></a>
+         <a href="#s-delivery" class="s--before arrow-down"></a>
          <div class="s__title s__title--light">
             <div class="h2-title">Доставка и оплата</div>
             <p>Независимо от того, какой сейчас час, какая погода и как далеко вы живете - наша оперативная доставка с
@@ -719,7 +719,7 @@
    <!-- /.page-content -->
 
    <!-- .page-footer -->
-   <footer class="page-footer" style="background-image: url('img/general/flour.jpg');">
+   <footer class="page-footer" id="page-footer" style="background-image: url('img/general/flour.jpg');">
 
       <div class="container">
          <div class="row">
@@ -738,20 +738,20 @@
                <h3 class="h3-title">Заказать:</h3>
                <nav class="main-nav page-footer__main-nav">
                   <ul class="nav page-footer__list">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                     <li class="nav-item">
+                        <a class="nav-link" href="#page-header">
                            <i class="icon icon-chevron-right"></i>Начало</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#s-pizza">
                            <i class="icon icon-chevron-right"></i>Выбрать Пиццу</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#s-snack">
                            <i class="icon icon-chevron-right"></i>Выбрать закуску</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#s-drink">
                            <i class="icon icon-chevron-right"></i>Выбрать Напитки</a>
                      </li>
                   </ul>

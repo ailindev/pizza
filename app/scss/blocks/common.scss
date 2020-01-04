@@ -16,6 +16,7 @@
    cursor: pointer;
    text-decoration: none;
    overflow: hidden;
+   white-space: nowrap;
 
    i {
       font-size: 13px;
@@ -36,14 +37,18 @@
       background-color: darken($accent, 10%);
    }
    &.select {
-      height: 48px;
+      position: relative;
    }
    &.selected {
-      line-height: 24px;
-      padding: 0 0 0 20px;
       background-color: darken($accent, 5%);
       cursor: initial;
+      padding-right: 110px;
+      padding-left: 20px;
       input {
+         position: absolute;
+         right: 45px;
+         top: 0;
+         display: block;
          font-family: "Roboto Condensed",sans-serif;
          width: 45px;
          margin-left: 25px;
@@ -53,16 +58,19 @@
          font-size: 22px;
          color: $text-light;
          background-color: darken($accent, 10%);
-
       }
       i {
-         display: inline-block;
+         position: absolute;
+         right: 0;
+         top: 0;
+         display: block;
          text-align: center;
          line-height: 51px;
          height: 100%;
          width: 45px;
          cursor: pointer;
          margin-right: 0;
+         transform: translateY(-2px);
          &:hover {
             background-color: darken($accent, 10%);
          }

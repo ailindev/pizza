@@ -88,11 +88,15 @@ select {
    }
 }
 
-header, section {
+header, section, footer {
    position: relative;
+   background-attachment: fixed;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   @include media-breakpoint-down(lg) {
+      background-attachment: initial;
+   }
 }
 
 .wrapper {

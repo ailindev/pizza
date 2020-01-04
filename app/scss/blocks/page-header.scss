@@ -8,12 +8,16 @@
       min-height: 100%;
       padding: 0 0 170px;
    }
+   .flex-wrapper {
+      .col-12 {
+         @include media-breakpoint-down(xs) {
+            padding: 0 5px;
+         }
+      }
 
+   }
    .flex-center {
       width: 100%;
-      @include media-breakpoint-down(md) {
-         margin: 70px auto 0;
-      }
    }
 }
 
@@ -23,18 +27,30 @@
    left: 0;
    width: 100%;
    padding-top: 35px;
+   z-index: 7;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
    transition: position .35s, background-color .35s;
-   @include media-breakpoint-down(md) {
-      //position: initial;
+   &.page-header__main-nav {
+      @include media-breakpoint-down(md) {
+         position: initial;
+         height: 174.25px;
+         margin-bottom: 50px;
+      }
+      @include media-breakpoint-down(sm) {
+         height: 96.25px;
+      }
+      @include media-breakpoint-down(xs) {
+         height: 195.25px;
+         margin-bottom: 35px;
+      }
    }
+
    &--fixed {
       position: fixed;
       padding: 3px 0;
-      z-index: 6;
       background-image: url('../../img/general/flour.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
    }
 
    .row {
@@ -54,14 +70,77 @@
       }
    }
 
-   .nav {
-      @include media-breakpoint-down(md) {
-         order: 3;
-         margin-top: 30px;
+   .menu-button {
+      display: none;
+      opacity: 0;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      right: 15px;
+      top: 15px;
+      width: 55px;
+      height: 55px;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: $accent;
+      cursor: pointer;
+      z-index: 8;
+      transition: $trs;
+      @include media-breakpoint-down(sm) {
+         display: flex;
+         opacity: 1;
       }
-      @include media-breakpoint-down(xs) {
-         margin: auto;
-         flex-direction: column;
+      span {
+         display: block;
+         position: absolute;
+         width: 23px;
+         height: 2px;
+         background-color: #fafafa;
+         transition: $trs;
+         &:before, &::after {
+            display: block;
+            position: absolute;
+            width: 23px;
+            height: 2px;
+            background-color: #fafafa;
+         }
+         &:before {
+            content: '';
+            top: -7px;
+         }
+         &:after {
+            content: '';
+            top: 7px;
+         }
+      }
+      &--show {
+         span {
+            transform: rotate(45deg);
+            &:before {
+               top: 0;
+               transform: rotate(0);
+            }
+            &:after {
+               top: 0;
+               transform: rotate(90deg);
+            }
+         }
+      }
+   }
+
+   .nav {
+      &.page-header__nav {
+         @include media-breakpoint-down(md) {
+            order: 3;
+            padding: 8px;
+         }
+         @include media-breakpoint-down(sm) {
+            display: none;
+         }
+         @include media-breakpoint-down(xs) {
+            margin: auto;
+            flex-direction: column;
+         }
       }
       &--fixed{
          position: fixed;
@@ -70,7 +149,7 @@
          width: 100%;
          justify-content: center;
          margin-top: 0;
-         padding: 5px 0;
+         padding: 8px 0;
          z-index: 6;
          background-image: url('../../img/general/flour.jpg');
          background-size: cover;
@@ -87,6 +166,10 @@
       @include media-breakpoint-down(md) {
          margin-right: 90px;
          order: 1;
+         margin-bottom: 30px;
+      }
+      @include media-breakpoint-down(sm) {
+         margin-bottom: 0;
       }
       @include media-breakpoint-down(xs) {
          margin: auto;
@@ -100,6 +183,10 @@
       span {
          display: block;
       }
+      @include media-breakpoint-down(xs) {
+         font-size: 30px;
+         margin-left: 12px;
+      }
    }
 
    .icon-logo {
@@ -110,13 +197,16 @@
       align-items: center;
       background-color: darken($accent, 20%);
       border-radius: 50%;
-
+      @include media-breakpoint-down(xs) {
+         width: 55px;
+         height: 55px;
+      }
       &:before {
          margin-top: -2px;
          color: $text-light;
          transform: rotate(15deg);
          display: inline-block;
-         font-size: 34px;
+         font-size: 39px;
       }
    }
 
@@ -157,11 +247,8 @@
          padding: 5px;
       }
       @include media-breakpoint-down(sm) {
-         padding: 0;
-      }
-      @include media-breakpoint-down(xs) {
-         padding: 9px;
-         font-size: 14px;
+         padding: 15px;
+         font-size: 16px;
          text-decoration: none;
       }
 
@@ -194,6 +281,16 @@
    }
 
    &__contact-phone {
+      @include media-breakpoint-down(md) {
+         order: 2;
+         margin-bottom: 30px;
+      }
+      @include media-breakpoint-down(sm) {
+         margin-bottom: 0;
+      }
+      @include media-breakpoint-down(xs) {
+         margin: 30px auto;
+      }
       p {
          text-align: right;
          margin-bottom: 5px;
@@ -201,10 +298,13 @@
          line-height: 1;
 
          &:first-child {
-            opacity: 0.45;
+            opacity: .8;
             font-size: 12px;
             font-weight: 400;
             letter-spacing: 1.4px;
+            @include media-breakpoint-down(xs) {
+               font-size: 13px;
+            }
          }
 
          &:last-child {
@@ -213,26 +313,27 @@
             letter-spacing: 1.45px;
             font-weight: 700;
             font-family: "Roboto Condensed", sans-serif;
-
+            @include media-breakpoint-down(xs) {
+               font-size: 16px;
+            }
             span {
                font-size: 22px;
                font-weight: 700;
                letter-spacing: -0.15px;
+               @include media-breakpoint-down(xs) {
+                  font-size: 23px;
+               }
             }
          }
       }
 
-      .icon-phone-alt {
+      .icon-phone {
          margin-right: 2px;
          font-size: 11px;
          color: $accent;
-      }
-
-      @include media-breakpoint-down(md) {
-         order: 2;
-      }
-      @include media-breakpoint-down(xs) {
-         margin: 30px auto;
+         @include media-breakpoint-down(xs) {
+            font-size: 13px;
+         }
       }
    }
 }

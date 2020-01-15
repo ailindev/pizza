@@ -1,5 +1,6 @@
 $(function () {
-
+   
+   // Слайдер Slick
    $('#carousel-main').slick({
       infinite: false,
       responsive: [
@@ -18,7 +19,6 @@ $(function () {
          }
       ]
    });
-
    $('#carousel-pizza').slick({
       infinite: false,
       slidesToShow: 3,
@@ -49,7 +49,6 @@ $(function () {
          }
       ]
    });
-
    $('#carousel-snack').slick({
       infinite: false,
       slidesToShow: 3,
@@ -80,7 +79,6 @@ $(function () {
          }
       ]
    });
-
    $('#carousel-drink').slick({
       infinite: false,
       slidesToShow: 3,
@@ -126,7 +124,7 @@ $(function () {
 
       // Установка условий, когда меню будет прикрепляться вверху экрана
       function menuFixed() {
-         scrollTop = $(window).scrollTop() + 150;
+         scrollTop = $(window).scrollTop() + 220;
 
          // Проверка на разрешение экрана
          if (winWidth < 992 && winWidth > 768) {
@@ -186,38 +184,56 @@ $(function () {
              section1 = $('#s-pizza').offset().top - 200,
              section2 = $('#s-snack').offset().top - 200,
              section3 = $('#s-drink').offset().top - 200,
-             section4 = $('#s-delivery').offset().top,
-             section5 = $('#s-checkout').offset().top,
-             footer = $('#page-footer').offset().top;
+             section4 = $('#s-delivery').offset().top;
+             // section5 = $('#s-checkout').offset().top,
+             // footer = $('#page-footer').offset().top;
 
          // Проверка положения секции относительно других и добавление подсветки
          if (scrollTop >= header && scrollTop < section1) {
-            $('a[href^="#"]').parent().removeClass('active');
-            $('a[href="#page-header"]').parent().addClass('active');
+            $('li a[href^="#"]').parent().removeClass('active');
+            $('li a[href="#page-header"]').parent().addClass('active');
          } else if (scrollTop >= section1 && scrollTop < section2) {
-            $('a[href^="#"]').parent().removeClass('active');
-            $('a[href="#s-pizza"]').parent().addClass('active');
+            $('li a[href^="#"]').parent().removeClass('active');
+            $('li a[href="#s-pizza"]').parent().addClass('active');
          } else if (scrollTop >= section2 && scrollTop < section3) {
-            $('a[href^="#"]').parent().removeClass('active');
-            $('a[href="#s-snack"]').parent().addClass('active');
+            $('li a[href^="#"]').parent().removeClass('active');
+            $('li a[href="#s-snack"]').parent().addClass('active');
          } else if (scrollTop >= section3 && scrollTop < section4) {
-            $('a[href^="#"]').parent().removeClass('active');
-            $('a[href="#s-drink"]').parent().addClass('active');
+            $('li a[href^="#"]').parent().removeClass('active');
+            $('li a[href="#s-drink"]').parent().addClass('active');
          } else {
-            $('a[href^="#"]').parent().removeClass('active');
+            $('li a[href^="#"]').parent().removeClass('active');
          }
       }
 
       itemHighlight();
 
       // Переход по секциям
-      $($('.page-header a[href^="#"]').on('click', goToAnchor));
+      $($('.page-header .main-nav a[href^="#"]').on('click', goToAnchor));
+      $($('.page-footer .main-nav a[href^="#"]').on('click', goToAnchor));
       $($('a[href^="#"].arrow-down').on('click', goToAnchor));
 
       function goToAnchor(e) {
+
+
          let sc = $(this).attr("href"),
              dn = $(sc).offset().top;
-         $('html, body').animate({scrollTop: dn}, 1000);
+
+         // Изменение отступов для разных экранов(минус высота меню)
+         if ($(window).width() > 1200) {
+            dn = $(sc).offset().top - 63.25;
+         } else if ($(window).width() < 1200 && $(window).width() > 768) {
+            dn = $(sc).offset().top - 46.25;
+         } else if ($(window).width() < 768) {
+            dn = $(sc).offset().top + 1;
+         }
+
+         // Анимация только для настольных экранов
+         if ($(window).width() > 1024) {
+            $('html, body').stop().animate({scrollTop: dn}, 1000);
+         } else {
+            $('html, body').stop().animate({scrollTop: dn}, 0);
+         }
 
          e.preventDefault();
       }

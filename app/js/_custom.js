@@ -209,9 +209,9 @@ $(function () {
       itemHighlight();
 
       // Переход по секциям
-      $($('.page-header .main-nav a[href^="#"]').on('click', goToAnchor));
-      $($('.page-footer .main-nav a[href^="#"]').on('click', goToAnchor));
-      $($('a[href^="#"].arrow-down').on('click', goToAnchor));
+      $('.page-header .main-nav a[href^="#"]').on('click', goToAnchor);
+      $('.page-footer .main-nav a[href^="#"]').on('click', goToAnchor);
+      $('a[href^="#"].arrow-down').on('click', goToAnchor);
 
       function goToAnchor(e) {
 

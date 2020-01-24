@@ -1,18 +1,18 @@
 // Import base styles
-@import "base/vars";
-@import "base/fonts";
-@import "base/libs";
-@import "base/scaffolding";
+@import "./base/vars";
+@import "./base/fonts";
+@import "./base/libs";
+@import "./base/scaffolding";
 
 // Import blocks styles
-@import "blocks/common";
-@import "blocks/page-header";
-@import "blocks/page-footer";
-@import "blocks/s-pizza";
-@import "blocks/s-snack";
-@import "blocks/s-drink";
-@import "blocks/s-delivery";
-@import "blocks/s-checkout";
+@import "./blocks/common";
+@import "./blocks/page-header";
+@import "./blocks/page-footer";
+@import "./blocks/s-pizza";
+@import "./blocks/s-snack";
+@import "./blocks/s-drink";
+@import "./blocks/s-delivery";
+@import "./blocks/s-checkout";
 
 // ≥1200px
 //@include media-breakpoint-down(lg) {}

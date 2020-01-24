@@ -53,7 +53,7 @@
    &--fixed {
       position: fixed;
       padding: 4px 0;
-      background-image: url('../../img/general/flour.jpg');
+      background-image: url('../img/general/flour.jpg');
    }
 
    .row {
@@ -154,7 +154,7 @@
          margin-top: 0;
          padding: 8px 0;
          z-index: 6;
-         background-image: url('../../img/general/flour.jpg');
+         background-image: url('../img/general/flour.jpg');
          background-size: cover;
          background-repeat: no-repeat;
          background-position: center;
@@ -432,7 +432,6 @@
 
       p {
          margin-top: 31px;
-         margin-bottom: 58px;
          color: $text-light;
          font-size: 16px;
          font-weight: 400;
@@ -440,15 +439,15 @@
          max-width: 250px;
          @include media-breakpoint-down(lg) {
             margin-top: 25px;
-            margin-bottom: 45px;
+            margin-bottom: 0;
          }
          @include media-breakpoint-down(md) {
             max-width: 70%;
-            margin: 25px auto 30px;
+            margin: 25px auto 0;
          }
          @include media-breakpoint-down(sm) {
             max-width: 80%;
-            margin: 18px auto 30px;
+            margin: 18px auto 0;
          }
       }
    }

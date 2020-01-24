@@ -1,5 +1,5 @@
 $(function () {
-   
+
    // Слайдер Slick
    $('#carousel-main').slick({
       infinite: false,
@@ -185,8 +185,8 @@ $(function () {
              section2 = $('#s-snack').offset().top - 200,
              section3 = $('#s-drink').offset().top - 200,
              section4 = $('#s-delivery').offset().top;
-             // section5 = $('#s-checkout').offset().top,
-             // footer = $('#page-footer').offset().top;
+         // section5 = $('#s-checkout').offset().top,
+         // footer = $('#page-footer').offset().top;
 
          // Проверка положения секции относительно других и добавление подсветки
          if (scrollTop >= header && scrollTop < section1) {
@@ -245,57 +245,88 @@ $(function () {
 
 
    // Настройка размеров пиццы
-   $('.carousel-pizza .size-price-wrap .size').on('click', function () {
-      // Удаление класса active со всех элементов
-      $(this).parent().children('.size').removeClass('active');
+   function pizzaSize() {
+      $('.carousel-pizza .size-price-wrap .size').on('click', function () {
+         // Удаление класса active со всех элементов
+         $(this).parent().children('.size').removeClass('active');
 
-      // Добавление/Удаление класса active с элемента карусели
-      if (!$(this).hasClass('active')) {
-         $(this).addClass('active');
+         // Добавление/Удаление класса active с элемента карусели
+         if (!$(this).hasClass('active')) {
+            $(this).addClass('active');
 
-      } else if ($(this).hasClass('active')) {
-         $(this).removeClass('active');
-      }
+         } else if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+         }
 
-      // Изменение стоимости
-      let price = +$($(this).parents('.size-price-wrap').find('.sum')).attr('data-price');
-      let size = +$($(this).parents('.size-price-wrap').find('.size.active')).attr('data-size');
-      let totalPrice = Math.ceil(price + (price * 0.15));
+         // Изменение стоимости
+         let price = +$(this).parents('.size-price-wrap').find('.price span').attr('data-price');
+         let size = +$(this).parents('.size-price-wrap').find('.size.active').attr('data-size');
+         let totalPrice = Math.ceil(price + (price * 0.15));
+         let pizzaTitle = $(this).parents('.card').find('.card-title');
 
-      // Функция для соблюдения пробелов у сумм более тысячи
-      function toNiceView(n) {
-         n += "";
-         n = new Array(4 - n.length % 3).join("U") + n;
-         return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
-      }
+         // Функция для соблюдения пробелов у сумм более тысячи
+         function toNiceView(n) {
+            n += "";
+            n = new Array(4 - n.length % 3).join("U") + n;
+            return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+         }
 
-      // Перезапись переменных
-      price = toNiceView(price);
-      totalPrice = toNiceView(totalPrice);
+         // Перезапись переменных
+         price = toNiceView(price);
+         totalPrice = toNiceView(totalPrice);
 
-      // Присваивание цены, в зависимости от размера
-      if (size === 32) {
-         $(this).parents('.size-price-wrap').find('.sum').text(totalPrice);
-      } else if (size === 26) {
-         $(this).parents('.size-price-wrap').find('.sum').text(price);
-      }
+         // Присваивание цены, в зависимости от размера
+         if (size === 32) {
+            $(this).parents('.size-price-wrap').find('.price span').text(totalPrice);
+            pizzaTitle.text(pizzaTitle.attr('data-title').replace('26', '32'));
+            pizzaTitle.attr('data-title', pizzaTitle.text().trim());
+         } else if (size === 26) {
+            $(this).parents('.size-price-wrap').find('.price span').text(price);
+            pizzaTitle.text(pizzaTitle.attr('data-title').replace('32', '26'));
+            pizzaTitle.attr('data-title', pizzaTitle.text().trim());
+         }
 
-   });
-
-   // Настройка кнопок "выбрать"
-   let btnSelect = $('a.button.select');
-   btnSelect.on('click', btnSelected);
-
-   function btnSelected(e) {
-      let th = $(this);
-      th.addClass('selected');
-      // Проверка на выбранность
-      if (th.hasClass('selected') && th.html() === '<i class="icon-check"></i>Выбрать') {
-         th.html('Количество<input type="text"><i class="icon-check"></i>');
-         th.children('input').focus();
-      }
-
-      e.preventDefault();
+      });
    }
+
+   pizzaSize();
+
+
+   // // Калькулятор
+   function calcOrder() {
+      let btnSelect = $('a.button.select');
+      btnSelect.on('click', btnSelected);
+      btnSelect.on('click', addItem);
+
+      // Настройка кнопок "выбрать"
+      function btnSelected(e) {
+         let th = $(this);
+
+         // Проверка на выбранность
+         if (th.html() === '<i class="icon-check"></i>Выбрать') {
+            // Возвращение остальных кнопок в дефолт состояние
+            btnSelect.removeClass('selected');
+            btnSelect.html('<i class="icon-check"></i>Выбрать');
+            // Изменение вида при нажатии
+            th.addClass('selected');
+            th.html('Количество:<input type="text"><i class="icon-check"></i>');
+            th.children('input').focus();
+         }
+
+         e.preventDefault();
+      }
+
+      // Добавление элемента в заказ
+      function addItem() {
+         const item = $(this).parents('.card');
+         const itemTitle = item.find('.card-title').attr('data-title');
+         const itemPrice = item.find('.price span').attr('data-price');
+         console.log(itemTitle);
+         console.log(itemPrice);
+      }
+   }
+
+   calcOrder();
+
 
 });

@@ -16,18 +16,18 @@
    <meta property="og:image" content="path/to/image.jpg">
 
    <!--[if lt IE 9]>
-   <script src="libs/html5shiv/html5shiv.min.js"></script>
+   <script src="./libs/html5shiv/html5shiv.min.js"></script>
    <![endif]-->
 
-   <link rel="icon" href="img/icons/favicon/favicon.png">
-   <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicon/apple-touch-icon-180x180.png">
+   <link rel="icon" href="./img/icons/favicon/favicon.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/favicon/apple-touch-icon-180x180.png">
    <!-- Template Basic Images End -->
 
    <!-- Custom Browsers Color Start -->
    <meta name="theme-color" content="#000">
    <!-- Custom Browsers Color End -->
 
-   <link rel="stylesheet" href="css/style.min.css">
+   <link rel="stylesheet" href="./css/style.min.css">
 
 </head>
 
@@ -37,7 +37,7 @@
    <div class="overlay"></div>
    <!-- .page-header -->
    <header class="page-header" id="page-header"
-           style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('img/general/main-bg.jpg');">
+           style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('./img/general/main-bg.jpg');">
 
       <nav class="page-header__main-nav main-nav navbar" id="main-nav">
          <div class="container">
@@ -92,12 +92,12 @@
                            <div class="carousel-main__composition">
                               <h4 class="h4-title">Пицца Неаполитана</h4>
                               <p>Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром</p>
-                              <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
+<!--                              <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>-->
                            </div>
                            <div class="carousel-main__img">
                               <picture>
-                                 <img src="img/content/header/neapolitana.png"
-                                      srcset="img/content/header/neapolitana.png 1x, img/content/header/neapolitana@2x.png 2x"
+                                 <img src="./img/content/header/neapolitana.png"
+                                      srcset="./img/content/header/neapolitana.png 1x, ./img/content/header/neapolitana@2x.png 2x"
                                       alt="">
                               </picture>
                            </div>
@@ -106,12 +106,12 @@
                            <div class="carousel-main__composition">
                               <h4 class="h4-title">Пицца Томато</h4>
                               <p>Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром</p>
-                              <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
+<!--                              <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>-->
                            </div>
                            <div class="carousel-main__img">
                               <picture>
-                                 <img src="img/content/header/pepperony.png"
-                                      srcset="img/content/header/pepperony.png 1x, img/content/header/pepperony@2x.png 2x"
+                                 <img src="./img/content/header/pepperony.png"
+                                      srcset="./img/content/header/pepperony.png 1x, ./img/content/header/pepperony@2x.png 2x"
                                       alt="">
                               </picture>
                            </div>
@@ -120,12 +120,12 @@
                            <div class="carousel-main__composition">
                               <h4 class="h4-title">Пицца Тропикана</h4>
                               <p>Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром</p>
-                              <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
+<!--                              <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>-->
                            </div>
                            <div class="carousel-main__img">
                               <picture>
-                                 <img src="img/content/header/tropicana.png"
-                                      srcset="img/content/header/tropicana.png 1x, img/content/header/tropicana@2x.png 2x"
+                                 <img src="./img/content/header/tropicana.png"
+                                      srcset="./img/content/header/tropicana.png 1x, ./img/content/header/tropicana@2x.png 2x"
                                       alt="">
                               </picture>
                            </div>
@@ -173,18 +173,16 @@
                                             data-size="32">32</button>
                                  </div>
                                  <p class="price">
-                                    <span class="sum" data-price="1600">1 600</span>
-                                    <span class="currency"> руб.</span>
+                                    <span data-price="1250">1 250</span> руб.
                                  </p>
                               </div>
                               <picture>
-                                 <img class="card-img-top" src="img/content/choice-pizza/neapolitana.png"
-                                      srcset="img/content/choice-pizza/neapolitana.png 1x, img/content/choice-pizza/neapolitana@2x.png 2x"
+                                 <img class="card-img-top" src="./img/content/choice-pizza/neapolitana.png"
                                       alt="">
                               </picture>
                            </div>
                            <div class="card-body">
-                              <h5 class="card-title">Пицца томато, 26 см</h5>
+                              <h5 class="card-title" data-title="Пицца томато, 26 см">Пицца томато, <span>26</span> см</h5>
                               <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер
                                  в любой компании.</p>
                               <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
@@ -202,18 +200,16 @@
                                             data-size="32">32</button>
                                  </div>
                                  <p class="price">
-                                    <span class="sum" data-price="1550">1 550</span>
-                                    <span class="currency"> руб.</span>
+                                    <span data-price="1300">1 300</span> руб.
                                  </p>
                               </div>
                               <picture>
-                                 <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
-                                      srcset="img/content/choice-pizza/pepperony.png 1x, img/content/choice-pizza/pepperony@2x.png 2x"
+                                 <img class="card-img-top" src="./img/content/choice-pizza/pepperony.png"
                                       alt="">
                               </picture>
                            </div>
                            <div class="card-body">
-                              <h5 class="card-title">Пицца пепперони, 26 см</h5>
+                              <h5 class="card-title" data-title="Пицца пепперони, 26 см">Пицца пепперони, <span>26</span> см</h5>
                               <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер
                                  в любой компании.</p>
                               <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
@@ -231,18 +227,16 @@
                                             data-size="32">32</button>
                                  </div>
                                  <p class="price">
-                                    <span class="sum" data-price="1880">1 880</span>
-                                    <span class="currency"> руб.</span>
+                                    <span data-price="1450">1 450</span> руб.
                                  </p>
                               </div>
                               <picture>
-                                 <img class="card-img-top" src="img/content/choice-pizza/tropicana.png"
-                                      srcset="img/content/choice-pizza/tropicana.png 1x, img/content/choice-pizza/tropicana@2x.png 2x"
+                                 <img class="card-img-top" src="./img/content/choice-pizza/tropicana.png"
                                       alt="">
                               </picture>
                            </div>
                            <div class="card-body">
-                              <h5 class="card-title">Пицца тропикана, 26 см</h5>
+                              <h5 class="card-title" data-title="Пицца тропикана, 26 см">Пицца тропикана, <span>26</span> см</h5>
                               <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер
                                  в любой компании.</p>
                               <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
@@ -260,18 +254,16 @@
                                             data-size="32">32</button>
                                  </div>
                                  <p class="price">
-                                    <span class="sum" data-price="1550">1 550</span>
-                                    <span class="currency"> руб.</span>
+                                    <span data-price="1300">1 300</span> руб.
                                  </p>
                               </div>
                               <picture>
-                                 <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
-                                      srcset="img/content/choice-pizza/pepperony.png 1x, img/content/choice-pizza/pepperony@2x.png 2x"
+                                 <img class="card-img-top" src="./img/content/choice-pizza/pepperony.png"
                                       alt="">
                               </picture>
                            </div>
                            <div class="card-body">
-                              <h5 class="card-title">Пицца пепперони, 26 см</h5>
+                              <h5 class="card-title" data-title="Пицца пепперони, 26 см">Пицца пепперони, <span>26</span> см</h5>
                               <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер
                                  в любой компании.</p>
                               <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
@@ -289,18 +281,16 @@
                                             data-size="32">32</button>
                                  </div>
                                  <p class="price">
-                                    <span class="sum" data-price="1600">1 600</span>
-                                    <span class="currency"> руб.</span>
+                                    <span data-price="1250">1 250</span> руб.
                                  </p>
                               </div>
                               <picture>
-                                 <img class="card-img-top" src="img/content/choice-pizza/neapolitana.png"
-                                      srcset="img/content/choice-pizza/neapolitana.png 1x, img/content/choice-pizza/neapolitana@2x.png 2x"
+                                 <img class="card-img-top" src="./img/content/choice-pizza/neapolitana.png"
                                       alt="">
                               </picture>
                            </div>
                            <div class="card-body">
-                              <h5 class="card-title">Пицца томато, 26 см</h5>
+                              <h5 class="card-title" data-title="Пицца томато, 26 см">Пицца томато, <span>26</span> см</h5>
                               <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер
                                  в любой компании.</p>
                               <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
@@ -318,18 +308,16 @@
                                             data-size="32">32</button>
                                  </div>
                                  <p class="price">
-                                    <span class="sum" data-price="1550">1 550</span>
-                                    <span class="currency"> руб.</span>
+                                    <span data-price="1300">1 300</span> руб.
                                  </p>
                               </div>
                               <picture>
-                                 <img class="card-img-top" src="img/content/choice-pizza/pepperony.png"
-                                      srcset="img/content/choice-pizza/pepperony.png 1x, img/content/choice-pizza/pepperony@2x.png 2x"
+                                 <img class="card-img-top" src="./img/content/choice-pizza/pepperony.png"
                                       alt="">
                               </picture>
                            </div>
                            <div class="card-body">
-                              <h5 class="card-title">Пицца пепперони, 26 см</h5>
+                              <h5 class="card-title" data-title="Пицца пепперони, 26 см">Пицца пепперони, <span>26</span> см</h5>
                               <p class="card-desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер
                                  в любой компании.</p>
                               <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
@@ -353,7 +341,7 @@
       <!-- /#s-pizza.s-pizza -->
 
       <section class="s-snack" id="s-snack"
-               style="background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('img/general/snack-bg.jpg');">
+               style="background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('./img/general/snack-bg.jpg');">
          <a href="#s-snack" class="s--before arrow-down"></a>
          <div class="s__title s__title--light">
             <div class="h2-title">Выбрать Закуски</div>
@@ -370,18 +358,14 @@
 
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat1.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat1.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="125">125</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат греческий</h5>
+                           <h5 class="card-title" data-title="Салат греческий">Салат греческий</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -390,18 +374,14 @@
                      </div>
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat2.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat2.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="130">130</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат Монтекристо</h5>
+                           <h5 class="card-title" data-title="Салат Монтекристо">Салат Монтекристо</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -410,18 +390,14 @@
                      </div>
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat3.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat3.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="140">140</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат Оливье</h5>
+                           <h5 class="card-title" data-title="Салат Оливье">Салат Оливье</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -430,18 +406,14 @@
                      </div>
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat1.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat1.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="125">125</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат греческий</h5>
+                           <h5 class="card-title" data-title="Салат греческий">Салат греческий</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -450,18 +422,14 @@
                      </div>
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat1.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat1.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="125">125</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат греческий</h5>
+                           <h5 class="card-title" data-title="Салат греческий">Салат греческий</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -470,18 +438,14 @@
                      </div>
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat2.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat2.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="125">125</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат греческий</h5>
+                           <h5 class="card-title" data-title="Салат греческий">Салат греческий</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -490,18 +454,14 @@
                      </div>
                      <div class="carousel-snack__item card">
                         <div class="card-img-wrap">
-                           <!--                        <picture>-->
-                           <img class="card-img-top" src="img/content/choice-snack/salat3.jpg" alt="">
-                           <!--                                srcset="img/content/choice-snack/salat1.png 1x, img/content/choice-snack/salat1@2x.png 2x"-->
-
-                           <!--                        </picture>-->
+                           <img class="card-img-top" src="./img/content/choice-snack/salat3.jpg" alt="">
                            <div class="size-price-wrap">
-                              <div class="size"><span>125</span> р.</div>
-                              <div class="price"><span>100</span> гр.</div>
+                              <div class="price"><span data-price="125">125</span> р.</div>
+                              <div class="size"><span>100</span> гр.</div>
                            </div>
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Салат греческий</h5>
+                           <h5 class="card-title" data-title="Салат греческий">Салат греческий</h5>
                            <p class="card-desc">Лучшее дополнение к любому столу из свежих овощей с пикантным сыром</p>
                            <p class="card-structure"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное
                               наименование</p>
@@ -537,55 +497,55 @@
 
                      <div class="carousel-drink__item card">
                         <div class="card-img-wrap">
-                           <img class="card-img-top" src="img/content/choice-drink/cocacola.png" alt="">
+                           <img class="card-img-top" src="./img/content/choice-drink/cocacola.png" alt="">
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">кока-кола, 1.5 л.</h5>
-                           <p class="card-price">86 руб.</p>
+                           <h5 class="card-title" data-title="Кока-Кола, 1.5 л.">Кока-Кола, 1.5 л.</h5>
+                           <p class="price"><span data-price="95">95</span> руб.</p>
                            <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
                         </div>
                      </div>
                      <!-- /.carousel-drink__item -->
                      <div class="carousel-drink__item card">
                         <div class="card-img-wrap">
-                           <img class="card-img-top" src="img/content/choice-drink/sprite.png" alt="">
+                           <img class="card-img-top" src="./img/content/choice-drink/sprite.png" alt="">
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Спрайт, 1.5 л.</h5>
-                           <p class="card-price">86 руб.</p>
+                           <h5 class="card-title" data-title="Спрайт, 1.5 л.">Спрайт, 1.5 л.</h5>
+                           <p class="price"><span data-price="86">86</span> руб.</p>
                            <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
                         </div>
                      </div>
                      <!-- /.carousel-drink__item -->
                      <div class="carousel-drink__item card">
                         <div class="card-img-wrap">
-                           <img class="card-img-top" src="img/content/choice-drink/schweppes.png" alt="">
+                           <img class="card-img-top" src="./img/content/choice-drink/schweppes.png" alt="">
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">Швепс, 1.5 л.</h5>
-                           <p class="card-price">86 руб.</p>
+                           <h5 class="card-title" data-title="Швепс, 1.5 л.">Швепс, 1.5 л.</h5>
+                           <p class="price"><span data-price="75">75</span> руб.</p>
                            <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
                         </div>
                      </div>
                      <!-- /.carousel-drink__item -->
                      <div class="carousel-drink__item card">
                         <div class="card-img-wrap">
-                           <img class="card-img-top" src="img/content/choice-drink/cocacola.png" alt="">
+                           <img class="card-img-top" src="./img/content/choice-drink/cocacola.png" alt="">
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">кока-кола, 1.5 л.</h5>
-                           <p class="card-price">86 руб.</p>
+                           <h5 class="card-title" data-title="Кока-Кола, 1.5 л.">Кока-Кола, 1.5 л.</h5>
+                           <p class="price"><span data-price="95">95</span> руб.</p>
                            <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
                         </div>
                      </div>
                      <!-- /.carousel-drink__item -->
                      <div class="carousel-drink__item card">
                         <div class="card-img-wrap">
-                           <img class="card-img-top" src="img/content/choice-drink/cocacola.png" alt="">
+                           <img class="card-img-top" src="./img/content/choice-drink/cocacola.png" alt="">
                         </div>
                         <div class="card-body">
-                           <h5 class="card-title">кока-кола, 1.5 л.</h5>
-                           <p class="card-price">86 руб.</p>
+                           <h5 class="card-title" data-title="Кока-Кола, 1.5 л.">Кока-Кола, 1.5 л.</h5>
+                           <p class="price"><span data-price="95">95</span> руб.</p>
                            <a href="#" class="button select"><i class="icon-check"></i>Выбрать</a>
                         </div>
                      </div>
@@ -604,7 +564,7 @@
       </section>
       <!-- /#s-drink.s-drink -->
 
-      <section class="s-delivery" id="s-delivery" style="background-image: url('img/general/flour.jpg');">
+      <section class="s-delivery" id="s-delivery" style="background-image: url('./img/general/flour.jpg');">
          <a href="#s-delivery" class="s--before arrow-down"></a>
          <div class="s__title s__title--light">
             <div class="h2-title">Доставка и оплата</div>
@@ -719,7 +679,7 @@
    <!-- /.page-content -->
 
    <!-- .page-footer -->
-   <footer class="page-footer" id="page-footer" style="background-image: url('img/general/flour.jpg');">
+   <footer class="page-footer" id="page-footer" style="background-image: url('./img/general/flour.jpg');">
 
       <div class="container">
          <div class="row">
@@ -762,40 +722,40 @@
                <h3 class="h3-title">Галерея Instagram:</h3>
                <div class="gallery-wrap">
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                   <div class="gallery-item">
-                     <a href="#"><img src="img/content/footer/salat1.png" alt="фото из инстаграма"></a>
+                     <a href="#"><img src="./img/content/footer/salat1.png" alt="фото из инстаграма"></a>
                   </div>
                </div>
             </div>
@@ -837,7 +797,7 @@
 
 
 <!-- SCRIPTS -->
-<script src="js/scripts.min.js"></script>
+<script src="./js/scripts.min.js"></script>
 
 </body>
 </html>

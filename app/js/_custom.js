@@ -294,13 +294,14 @@ $(function () {
 
    // // Калькулятор
    function calcOrder() {
-      let btnSelect = $('a.button.select');
+      const btnSelect = $('a.button.select');
+
       btnSelect.on('click', btnSelected);
       btnSelect.on('click', addItem);
 
       // Настройка кнопок "выбрать"
       function btnSelected(e) {
-         let th = $(this);
+         const th = $(this);
 
          // Проверка на выбранность
          if (th.html() === '<i class="icon-check"></i>Выбрать') {
@@ -310,7 +311,7 @@ $(function () {
             // Изменение вида при нажатии
             th.addClass('selected');
             th.html('Количество:<input type="text"><i class="icon-check"></i>');
-            th.children('input').focus();
+            th.children('input').focus().val('1');
          }
 
          e.preventDefault();
@@ -318,9 +319,29 @@ $(function () {
 
       // Добавление элемента в заказ
       function addItem() {
-         const item = $(this).parents('.card');
+         const th = $(this);
+         const item = th.parents('.card');
          const itemTitle = item.find('.card-title').attr('data-title');
          const itemPrice = item.find('.price span').attr('data-price');
+         const btnCheck = th.children('.icon-check');
+         let amount = th.children('input').val();
+         const orderList = $('#s-checkout .order-items');
+
+         // Клик по галочке
+         btnCheck.on('click', function() {
+            amount = $(this).prev('input').val();
+            orderList.append('<div class="order-item"><button class="order-item__btn-remove"><i class="icon-close"></i></button><div class="order-item-composition"><span class="order-item__name">'+itemTitle+'</span><div class="order-item__amount-price"><span class="order-item__amount">'+amount+'</span> шт. / <span class="order-item__price">'+itemPrice+'</span> руб.</div></div><!-- /.order-item-composition --></div>');
+         });
+
+         // Клик по клавише Enter
+         th.children('input').on('keypress', function(e) {
+            if(e.keyCode === 13) {
+               amount = $(this).val();
+               orderList.append('<div class="order-item"><button class="order-item__btn-remove"><i class="icon-close"></i></button><div class="order-item-composition"><span class="order-item__name">'+itemTitle+'</span><div class="order-item__amount-price"><span class="order-item__amount">'+amount+'</span> шт. / <span class="order-item__price">'+itemPrice+'</span> руб.</div></div><!-- /.order-item-composition --></div>');
+            }
+         });
+
+         console.log(amount);
          console.log(itemTitle);
          console.log(itemPrice);
       }

@@ -138,7 +138,14 @@
 
       &__name {
          font-size: initial;
-         margin-right: auto;
+         margin-right: 25px;
+         @include media-breakpoint-down(xs) {
+            margin: 0;
+         }
+      }
+
+      &__amount-price {
+         margin-left: auto;
          @include media-breakpoint-down(xs) {
             margin: 0;
          }

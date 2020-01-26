@@ -294,7 +294,7 @@ $(function () {
 
    // // Калькулятор
    function calcOrder() {
-      const btnSelect = $('a.button.select');
+      let btnSelect = $('a.button.select');
 
       btnSelect.on('click', btnSelected);
       btnSelect.on('click', addItem);
@@ -303,9 +303,11 @@ $(function () {
       // Настройка кнопок "выбрать"
       function btnSelected(e) {
          const th = $(this);
+         btnSelect = th;
+
 
          // Проверка на выбранность
-         if (th.html() === '<i class="icon-check"></i>Выбрать') {
+         if (th.html() === '<i class="icon-check"></i>Выбрать' && !btnSelect.hasClass('selected')) {
             // Возвращение остальных кнопок в дефолт состояние
             btnSelect.removeClass('selected');
             btnSelect.html('<i class="icon-check"></i>Выбрать');
@@ -325,39 +327,39 @@ $(function () {
              itemTitle = item.find('.card-title').attr('data-title'),
              itemPrice = item.find('.price span').attr('data-price'),
              btnCheck = th.children('.icon-check'),
+             input = th.children('input'),
              orderList = $('#s-checkout .order-items'),
              itemTemplate = () => {
                 return `<div class="order-item"><button class="order-item__btn-remove"><i class="icon-close"></i></button><div class="order-item-composition"><span class="order-item__name">${itemTitle}</span><div class="order-item__amount-price"><span class="order-item__amount">${amount}</span> шт. / <span class="order-item__price">${itemPrice}</span> руб.</div></div><!-- /.order-item-composition --></div>`;
              };
          let amount = th.children('input').val();
+         btnSelect = th;
 
-         if(th.hasClass('selected')) {
-            // Клик по галочке
-            btnCheck.on('click', function () {
-               amount = $(this).prev('input').val();
+         // Клик по галочке
+         btnCheck.on('click', function () {
+            amount = $(this).prev('input').val();
+            orderList.append(itemTemplate);
+            setTimeout(function () {
+               th.removeClass('selected');
+               th.html('<i class="icon-check"></i>Выбрать');
+            }, 50);
+         });
+
+         // Клик по клавише Enter
+         input.on('keypress', function (e) {
+            if (e.keyCode === 13) {
+               amount = $(this).val();
                orderList.append(itemTemplate);
-               setTimeout(function() {
+               setTimeout(function () {
                   th.removeClass('selected');
                   th.html('<i class="icon-check"></i>Выбрать');
-               },50);
-            });
-
-            // Клик по клавише Enter
-            th.children('input').on('keypress', function (e) {
-               if (e.keyCode === 13) {
-                  amount = $(this).val();
-                  orderList.append(itemTemplate);
-                  setTimeout(function() {
-                     console.log(th);
-                     th.removeClass('selected');
-                     th.html('<i class="icon-check"></i>Выбрать');
-                  },50);
-               }
-            });
-            console.log(amount);
-            console.log(itemTitle);
-            console.log(itemPrice);
-         }
+               }, 50);
+            }
+         });
+         console.log(amount);
+         console.log(itemTitle);
+         console.log(itemPrice);
+         console.log(btnSelect);
       }
    }
 

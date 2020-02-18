@@ -40,6 +40,7 @@
       position: relative;
    }
    &.selected {
+      display: none;
       background-color: darken($accent, 5%);
       cursor: initial;
       padding-right: 110px;

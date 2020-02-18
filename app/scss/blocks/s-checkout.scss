@@ -146,6 +146,7 @@
 
       &__amount-price {
          margin-left: auto;
+         white-space: nowrap;
          @include media-breakpoint-down(xs) {
             margin: 0;
          }
@@ -197,13 +198,6 @@
    }
 
    &-price {
-      &-final {
-         display: flex;
-         width: 100%;
-         @include media-breakpoint-down(xs) {
-            flex-direction: column;
-         }
-      }
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -212,14 +206,28 @@
       padding: 40px 0;
       color: $text-light;
 
+      &-final {
+         display: flex;
+         width: 100%;
+         @include media-breakpoint-down(xs) {
+            flex-direction: column;
+         }
+      }
+
       .h4-title {
          margin-bottom: 46px;
 
-         span {
+         > span {
             color: $accent;
+            text-transform: lowercase;
+            font-size: 22px;
+            @include media-breakpoint-down(xs) {
+               display: block;
+               margin-top: 10px;
+            }
 
-            span {
-               text-transform: lowercase;
+            > span {
+               font-size: 28px;
             }
          }
 
@@ -227,15 +235,7 @@
             width: 100%;
             margin-bottom: 55px;
          }
-
-         .price {
-            @include media-breakpoint-down(xs) {
-               display: block;
-               margin-top: 10px;
-            }
-         }
       }
-
    }
 
    &-reset {

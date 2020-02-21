@@ -301,7 +301,6 @@ $(function () {
       btnPush.on('click', addItem);
 
 
-
       // Настройка кнопок "выбрать"
       function btnSelected() {
          const btnWrap = $(this).parent(),
@@ -330,6 +329,7 @@ $(function () {
              itemPrice = item.find('.price span').attr('data-price'),
              orderList = $('#s-checkout .order-items'),
              amount = th.prev('input').val(),
+             modalInfo = $('#modal-info'),
              out = `<div class="order-item"><button class="order-item__btn-remove"><i class="icon-close"></i></button><div class="order-item-composition"><span class="order-item__name">${itemTitle}</span><div class="order-item__amount-price"><span class="order-item__amount">${amount}</span> шт. / <span class="order-item__price">${itemPrice * amount}</span> руб.</div></div><!-- /.order-item-composition --></div>`;
          orderList.append(out);
 
@@ -342,35 +342,62 @@ $(function () {
          $('button.selected').css('display', 'none');
          btnSelect.css('display', 'inline-block');
 
+
+         // Оповещение о добавлении товара в корзину
+         modalInfo.prepend(`<h6 class="h6-title">Товар: "<span>${itemTitle}</span>" добавлен в корзину</h6>`);
+
+         // Удалить товар из коризны
+         $('.order-item__btn-remove i').on('click', function () {
+            let parent = $(this).parents('.order-item');
+            parent.remove();
+            modalInfo.prepend(`<h6 class="h6-title">Товар: "<span>${itemTitle}</span>" удален из корзины</h6>`);
+
+            modalInfoToggle();
+            totalPrice();
+         });
+         // Очистить корзину с заказом
+         $('.order-reset').on('click', function () {
+            $('.order-items').children().remove();
+            modalInfo.prepend(`<h6 class="h6-title">Корзина очищена</h6>`);
+
+            totalPrice();
+            modalInfoToggle();
+         });
+
+         // Оповещение об удалении/добавлении товара и очистки корзины
+         function modalInfoToggle() {
+            modalInfo.addClass('modal-info--visible');
+
+            setTimeout(function() {
+               modalInfo.children('.h6-title').addClass('h6-title--visible');
+            }, 25);
+
+            clearTimeout(timeout);
+            let timeout =  setTimeout(function () {
+               modalInfo.removeClass('modal-info--visible');
+               modalInfo.html('');
+            }, 5000);
+
+
+         }
+
          // Конечный счет
          function totalPrice() {
             let totalPrice = $('.order-item__price');
             let calcTotalPrice = 0;
-            totalPrice.each(function() {
+            totalPrice.each(function () {
                calcTotalPrice += parseInt($(this).text());
             });
             calcTotalPrice = toNiceView(calcTotalPrice);
             $('.order-price .h4-title > span > span').html(calcTotalPrice);
+
+            modalInfoToggle();
          }
+
          totalPrice();
-
-         // Удалить товар из коризны
-         $('.order-item__btn-remove i').on('click', function() {
-            let parent = $(this).parents('.order-item');
-            parent.remove();
-
-            totalPrice();
-         });
-         // Очистить корзину с заказом
-         $('.order-reset').on('click', function() {
-         $('.order-items').children().remove();
-            totalPrice();
-         });
       }
    }
 
 
    calcOrder();
-
-
 });

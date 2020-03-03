@@ -53,6 +53,9 @@
 
       &-body {
          padding: 0;
+         > p {
+            padding: 0 10px;
+         }
       }
 
       &-title {
@@ -92,7 +95,7 @@
       }
       .button {
          @include media-breakpoint-down(md) {
-            display: block;
+            width:100%;
          }
       }
 
@@ -251,7 +254,6 @@
             @include media-breakpoint-down(sm) {
                margin-top: 25px;
                width: auto;
-               padding: 12px 24px;
             }
          }
       }

@@ -352,7 +352,7 @@ $(function () {
             parent.remove();
             modalInfo.prepend(`<h6 class="h6-title">Товар: "<span>${itemTitle}</span>" удален из корзины</h6>`);
 
-            modalInfoToggle();
+            // modalInfoToggle();
             totalPrice();
          });
 
@@ -367,7 +367,7 @@ $(function () {
             }
 
             totalPrice();
-            modalInfoToggle();
+            // modalInfoToggle();
          });
 
          // Оповещение об удалении/добавлении товара и очистки корзины
@@ -398,7 +398,7 @@ $(function () {
             calcTotalPrice = toNiceView(calcTotalPrice);
             $('.order-price .h4-title > span > span').html(calcTotalPrice);
 
-            modalInfoToggle();
+            // modalInfoToggle();
          }
 
          totalPrice();

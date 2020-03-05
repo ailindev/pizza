@@ -248,6 +248,7 @@
       text-transform: uppercase;
       margin-right: auto;
       transition: $trs;
+      cursor: pointer;
 
       &:hover {
          color: lighten($gray, 5%);
